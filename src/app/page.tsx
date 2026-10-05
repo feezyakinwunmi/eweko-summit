@@ -12,21 +12,31 @@ import {
   Sprout,
   Users,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 import Countdown from "@/components/Countdown";
 import SectionHeading from "@/components/SectionHeading";
 import PillarCard from "@/components/PillarCard";
 import { summitPillars, audience } from "@/data/summit";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
-  },
+
+
+
+const fadeUp: Variants = {
+hidden: {
+opacity: 0,
+y: 30,
+},
+visible: {
+opacity: 1,
+y: 0,
+transition: {
+duration: 0.6,
+ease: "easeOut",
+},
+},
 };
+
 
 export default function Home() {
   return (
