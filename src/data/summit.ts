@@ -45,168 +45,107 @@ export const audience = [
 
 export const agenda = [
 {
-time: "9:00 – 10:00 AM",
-duration: "60 mins",
-title: "Registration, Networking & Exhibition",
-lead: "EAS Team",
-description:
-"Registration, participant networking, partner and exhibitor engagement, and exhibition viewing.",
-type: "Networking",
-},
-{
-time: "10:00 – 10:05 AM",
-duration: "5 mins",
-title: "Opening / Welcome",
-lead: "Eweko Integrated Services",
-description:
-"Welcome participants and officially open EAS 2026.",
+time: "9:00 AM",
+duration: "30 mins",
 type: "Opening",
-},
-{
-time: "10:05 – 10:15 AM",
-duration: "10 mins",
 title: "Opening Remarks",
-lead: "Eweko Leadership / Host Representative",
 description:
-"Set the context for the summit and highlight the need for stronger food-system collaboration.",
-type: "Opening",
+"Welcome remarks, summit context and an introduction to the conversations ahead.",
+lead: "EAS Summit Host / Opening Speaker",
 },
 {
-time: "10:15 – 10:20 AM",
-duration: "5 mins",
-title: "National Anthem",
-lead: "Moderator / All",
-description:
-"A moment of national reflection before the summit programme begins.",
-type: "Ceremony",
-},
-{
-time: "10:20 – 10:30 AM",
-duration: "10 mins",
-title: "Goodwill Messages",
-lead: "Selected Partners / Stakeholders",
-description:
-"Partner perspectives and commitments to resilient and inclusive food systems.",
-type: "Address",
-},
-{
-time: "10:30 – 10:50 AM",
-duration: "20 mins",
-title: "Keynote Address",
-lead: "Keynote Speaker",
-description:
-"Building a more resilient and inclusive food system: opportunities, challenges and the pathway forward.",
+time: "9:30 AM",
+duration: "45 mins",
 type: "Keynote",
+title: "Keynote Address",
+description:
+"A keynote perspective on the future of innovation, entrepreneurship and sustainable development.",
+lead: "Keynote Speaker",
 },
 {
-time: "10:50 – 11:20 AM",
-duration: "30 mins",
-title: "Panel I: Produce More, Lose Less",
-lead: "Moderator + Panelists",
+time: "10:15 AM",
+duration: "60 mins",
+type: "Panel 01",
+title: "Building Solutions for Tomorrow",
 description:
-"Practical strategies for increasing food production while reducing post-harvest losses through climate-smart practices, technology, storage, market linkages and value-chain collaboration.",
-type: "Panel",
+"A conversation with founders, innovators and industry leaders on building practical solutions for emerging challenges.",
+lead: "Moderator",
+panelists: [
+"Panelist 01",
+"Panelist 02",
+"Panelist 03",
+],
 },
 {
-time: "11:20 – 11:35 AM",
-duration: "15 mins",
-title: "Innovation / Partner Showcase",
-lead: "Selected Partners / Exhibitors",
+time: "11:15 AM",
+duration: "45 mins",
+type: "Solution Showcase",
+title: "Innovation & Solution Showcase",
 description:
-"Short presentations of technologies, products, services and partnership opportunities.",
-type: "Showcase",
+"Selected innovators and solution builders present ideas, products and approaches designed to create measurable impact.",
+lead: "Eweko Team / Leadership",
 },
 {
-time: "11:35 AM – 12:00 PM",
-duration: "25 mins",
-title: "Networking / Refreshment Break",
-lead: "All Participants",
+time: "12:00 PM",
+duration: "60 mins",
+type: "Panel 02",
+title: "From Ideas to Impact",
 description:
-"Informal networking, refreshments and partner engagement.",
+"A practical discussion around turning ideas into sustainable ventures, partnerships and real-world impact.",
+lead: "Moderator",
+panelists: [
+"Panelist 01",
+"Panelist 02",
+"Panelist 03",
+],
+},
+{
+time: "1:00 PM",
+duration: "60 mins",
 type: "Networking",
+title: "Networking & Connection",
+description:
+"An opportunity for participants, partners, speakers and stakeholders to connect and explore opportunities.",
+lead: "EAS Team",
 },
 {
-time: "12:00 – 12:30 PM",
+time: "2:00 PM",
+duration: "60 mins",
+type: "Stakeholder Dialogue",
+title: "Stakeholder Dialogue",
+description:
+"A focused conversation bringing together stakeholders, partners and community representatives around shared priorities.",
+lead: "Selected Partners / Stakeholders",
+},
+{
+time: "3:00 PM",
 duration: "30 mins",
-title: "Panel II: Financing & Marketing the Food System",
-lead: "Moderator + Panelists",
+type: "Fireside Chat",
+title: "Leadership, Purpose & Possibility",
 description:
-"Unlocking capital for agribusinesses, connecting producers to markets and leveraging technology to scale resilient food enterprises.",
-type: "Panel",
-},
-{
-time: "12:30 – 12:45 PM",
-duration: "15 mins",
-title: "Eweko Integrated Services & EwekoAggregate Presentation",
-lead: "Eweko Team",
-description:
-"Present Eweko's work, EwekoAggregate, farmer-market linkages and the role of aggregation in reducing food loss.",
-type: "Presentation",
-},
-{
-time: "12:45 – 1:00 PM",
-duration: "15 mins",
-title: "Special Guest Address",
+"An intimate conversation exploring leadership, purpose and the possibilities available to the next generation.",
 lead: "Special Guest Speaker",
-description:
-"Building a more resilient and inclusive food system: opportunities, challenges and the pathway forward.",
-type: "Address",
 },
 {
-time: "1:00 – 1:30 PM",
+time: "3:30 PM",
 duration: "30 mins",
-title: "Panel III: From Policy to Practice",
-lead: "Moderator + Panelists",
-description:
-"Exploring policies, infrastructure and institutional actions required to strengthen production, reduce losses and improve markets.",
-type: "Panel",
-},
-{
-time: "1:30 – 1:45 PM",
-duration: "15 mins",
-title: "Technology & Innovation Showcase",
-lead: "Selected Technology / Agritech Partners",
-description:
-"Demonstrations of practical solutions including irrigation, digital agriculture, aggregation, market-linkage tools and cold-chain innovations.",
-type: "Showcase",
-},
-{
-time: "1:45 – 2:15 PM",
-duration: "30 mins",
-title: "Panel IV: Stakeholder Dialogue",
-lead: "Government, Development Partners, Private Sector & Farmers",
-description:
-"Building actionable partnerships and identifying priority policy and institutional recommendations.",
-type: "Panel",
-},
-{
-time: "2:15 – 2:30 PM",
-duration: "15 mins",
-title: "Stakeholder Commitments & Call to Action",
-lead: "Moderator + Selected Stakeholders",
-description:
-"Partners and participants state practical commitments around production, markets, finance, technology, post-harvest management and collaboration.",
 type: "Action",
+title: "The EAS Action Framework",
+description:
+"A practical framework for translating the day's conversations into commitments, collaboration and action.",
+lead: "EAS Secretariat",
 },
 {
-time: "2:30 – 2:45 PM",
-duration: "15 mins",
-title: "EAS 2026 Communiqué / Key Recommendations",
-lead: "Rapporteur / EAS Secretariat",
-description:
-"Summary of key discussions, priority recommendations and proposed next steps.",
+time: "4:00 PM",
+duration: "30 mins",
 type: "Closing",
-},
-{
-time: "2:45 – 3:00 PM",
-duration: "15 mins",
-title: "Closing Remarks & Vote of Thanks",
-lead: "Eweko Integrated Services Ltd",
+title: "Closing Remarks & Call to Action",
 description:
-"Appreciation to speakers, participants, partners and sponsors and an invitation to continue collaboration beyond the summit.",
-type: "Closing",
+"Key takeaways, acknowledgements and the final call to action from the summit.",
+lead: "EAS Summit Host",
 },
 ];
+
 
 export const partnershipTypes = [
 {

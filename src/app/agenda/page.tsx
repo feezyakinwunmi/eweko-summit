@@ -82,12 +82,40 @@ return (
                   {item.description}
                 </p>
 
-                <p className="mt-4 text-xs font-semibold text-[#102414]">
-                  Lead:{" "}
-                  <span className="font-normal text-[#667066]">
-                    {item.lead}
-                  </span>
-                </p>
+                <div className="mt-5 space-y-3">
+  <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+    <span className="text-xs font-bold uppercase tracking-wider text-[#558244]">
+      Lead
+    </span>
+
+<span className="text-sm font-semibold text-[#102414]">
+  {item.lead}
+</span>
+
+
+  </div>
+
+{item.panelists && item.panelists.length > 0 && ( <div> <p className="text-xs font-bold uppercase tracking-wider text-[#558244]">
+Panelists </p>
+
+
+  <div className="mt-2 flex flex-wrap gap-2">
+    {item.panelists.map((panelist) => (
+      <span
+        key={panelist}
+        className="rounded-full bg-[#f5f3ea] px-3 py-2 text-xs font-semibold text-[#667066]"
+      >
+        {panelist}
+      </span>
+    ))}
+  </div>
+</div>
+
+
+)}
+
+</div>
+
               </div>
 
               <div className="hidden text-right text-xs font-semibold text-[#c1c6c1] md:block">
