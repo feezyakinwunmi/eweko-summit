@@ -190,7 +190,7 @@ export default function Home() {
           >
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
               <Image
-                src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=85"
+                src="/eas.jpeg"
                 alt="Farmer working in an agricultural field"
                 fill
                 className="object-cover"
