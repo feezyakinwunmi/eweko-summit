@@ -20,57 +20,59 @@ const packages = [
   {
     tier: "01",
     name: "Platinum",
-    subtitle: "Signature Partner",
+    subtitle: "Anchor Partner",
+    price: "₦10,000,000",
     icon: Crown,
     description:
-      "The highest-level partnership for organisations seeking premium visibility, strategic positioning and meaningful participation across the Summit.",
+      "Ideal for major financial institutions, development programmes or projects, large agribusinesses, FMCGs, telecommunications companies and infrastructure organisations seeking high-level positioning.",
     featured: false,
     tone: "platinum",
     benefits: [
-      "Premium brand visibility across agreed Summit touchpoints",
-      "Strategic programme recognition",
-      "Premium exhibition opportunity",
-      "Opportunity for solution or innovation showcase",
-      "Stakeholder engagement opportunities",
-      "Partnership recognition in Summit communications",
-      "Post-Summit engagement opportunities",
+      "Top-tier brand visibility",
+      "One confirmed high-level programme contribution, with an opportunity to nominate one additional representative subject to programme relevance and availability",
+      "Premium exhibition space 36sqm (6m x 6m), customized with TV LED and elevated platform",
+      "Consent-based introductions to relevant Summit participants and organizations",
+      "8 VIP Passes",
+      "Access to aggregated or anonymised Summit insights",
+      "Recognition in the official post-event report",
     ],
   },
   {
     tier: "02",
     name: "Gold",
-    subtitle: "Principal Partner",
+    subtitle: "Value Chain Partner",
+    price: "₦6,000,000",
     icon: Gem,
     description:
-      "A strong partnership position for organisations looking to connect their brand with food-system transformation and practical action.",
+      "Ideal for established input, machinery, processing, logistics, cold-chain, finance, insurance and market-access organisations.",
     featured: true,
     tone: "gold",
     benefits: [
-      "High-level brand visibility",
-      "Programme and partner recognition",
-      "Exhibition opportunity",
-      "Opportunity for technology or solution showcase",
-      "Access to relevant stakeholder conversations",
-      "Recognition across selected communications",
-      "Post-Summit partnership opportunities",
+      "Prominent second-tier branding",
+      "Opportunity to nominate one technically relevant representative, subject to programme approval, and one curated solution spotlight",
+      "Premium exhibition space 6m x 3m with priority positioning, customized with TV LED and elevated platform",
+      "Facilitated B2B introductions based on mutual interest and participant consent",
+      "5 VIP Passes",
+      "Selected digital visibility and recognition in post-event communications",
     ],
   },
   {
     tier: "03",
     name: "Silver",
-    subtitle: "Supporting Partner",
+    subtitle: "Ecosystem Supporter",
+    price: "₦3,000,000",
     icon: Medal,
     description:
-      "A focused partnership route for organisations seeking meaningful participation and visibility within the Summit ecosystem.",
+      "Ideal for agritech companies, regional processors, service providers, off-takers and growing agribusinesses seeking focused visibility and participation.",
     featured: false,
     tone: "silver",
     benefits: [
-      "Partner recognition",
-      "Brand visibility across selected touchpoints",
-      "Exhibition opportunity where applicable",
-      "Stakeholder networking opportunities",
-      "Participation in relevant ecosystem conversations",
-      "Recognition in Summit materials",
+      "Logo on selected Summit materials and website",
+      "Verbal recognition during the opening programme and one digital sponsor profile or approved interview feature",
+      "Standard exhibition space 3m x 3m",
+      "Opportunity for selected introductions based on mutual interest and participant consent",
+      "3 VIP Passes",
+      "Post-event acknowledgement",
     ],
   },
 ];
@@ -145,12 +147,9 @@ function PackageIcon({
   icon: typeof Crown;
 }) {
   const styles = {
-    platinum:
-      "bg-white text-[#6d7470] border border-[#d9ddda]",
-    gold:
-      "bg-[#f5df9a] text-[#8a6818] border border-[#e2c66d]",
-    silver:
-      "bg-[#e5e8e7] text-[#68706d] border border-[#cbd0ce]",
+    platinum: "bg-white text-[#6d7470] border border-[#d9ddda]",
+    gold: "bg-[#f5df9a] text-[#8a6818] border border-[#e2c66d]",
+    silver: "bg-[#e5e8e7] text-[#68706d] border border-[#cbd0ce]",
   };
 
   return (
@@ -174,7 +173,7 @@ function Benefit({ children }: { children: string }) {
   );
 }
 
-function createPackageEmail(packageName: string) {
+function createPackageEmail(packageName: string, price: string) {
   const subject = encodeURIComponent(
     `EAS 2026 ${packageName} Sponsorship Enquiry`
   );
@@ -182,7 +181,7 @@ function createPackageEmail(packageName: string) {
   const body = encodeURIComponent(
     `Hello Eweko Team,
 
-I am interested in the ${packageName} sponsorship package for the Eweko Agribusiness Summit 2026.
+I am interested in the ${packageName} sponsorship package (${price}) for the Eweko Agribusiness Summit 2026.
 
 Please send me the full package details, requirements and next steps.
 
@@ -265,6 +264,10 @@ export default function SponsorshipPage() {
                         {item.name}
                       </h3>
 
+                      <p className="mt-3 text-2xl font-semibold tracking-tight text-[#558244]">
+                        {item.price}
+                      </p>
+
                       <p className="mt-4 min-h-[96px] text-sm leading-7 text-[#667066]">
                         {item.description}
                       </p>
@@ -273,7 +276,7 @@ export default function SponsorshipPage() {
                     <div className="my-7 h-px bg-black/10" />
 
                     <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#102414]">
-                      Partnership includes
+                      Deliverables &amp; benefits
                     </p>
 
                     <ul className="mt-5 space-y-3.5">
@@ -283,7 +286,7 @@ export default function SponsorshipPage() {
                     </ul>
 
                     <a
-                      href={createPackageEmail(item.name)}
+                      href={createPackageEmail(item.name, item.price)}
                       className={`mt-8 flex w-full items-center justify-center gap-2 rounded-full px-5 py-3.5 text-sm font-semibold transition ${
                         item.featured
                           ? "bg-[#b99632] text-white hover:bg-[#a6862d]"
@@ -361,14 +364,23 @@ export default function SponsorshipPage() {
 
                 <div className="p-5 text-center text-sm font-semibold sm:p-6">
                   Platinum
+                  <span className="mt-1 block text-[10px] font-normal text-white/50">
+                    ₦10M
+                  </span>
                 </div>
 
                 <div className="p-5 text-center text-sm font-semibold text-[#e7cc72] sm:p-6">
                   Gold
+                  <span className="mt-1 block text-[10px] font-normal text-[#e7cc72]/60">
+                    ₦6M
+                  </span>
                 </div>
 
                 <div className="p-5 text-center text-sm font-semibold sm:p-6">
                   Silver
+                  <span className="mt-1 block text-[10px] font-normal text-white/50">
+                    ₦3M
+                  </span>
                 </div>
               </div>
 
