@@ -50,7 +50,7 @@ className="h-10 w-30 rounded-full object-cover"
         ))}
 
         <Link
-          href="/register"
+           href="https://forms.gle/WiLHN4KP8P5V2G1Q7"
           className="group flex items-center gap-2 rounded-full bg-[#558244] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#659951]"
         >
           Register
